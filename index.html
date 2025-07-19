@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="tsparticles"></div>
+
     <div class="content">
         <div class="left">
             <div class="title">Techfest IIT Bombay 2025</div>
-        <span class="subtitle">Asia’s Largest Science & Tech Festival</span>
+        <div class="subtitle"><span class="typed"></span></div>
         <p class="desc">Join December 17–19 at IIT Bombay – 250+ global events</p>
         <div class="buttons">
         <a href="#register" class="btn primary">Register Now</a>
@@ -19,11 +21,13 @@
         
         </div>
         <div class="right"><img src="techimg.jpg" alt=""></div>
-        
-    </img>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+   </div>
+   
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
 <script>
-  var typed = new Typed('.subtitle', {
+  var typed = new Typed('.typed', {
     strings: [
       "Asia’s Largest Science & Tech Festival",
       "250+ Competitions, Workshops, and Shows"
@@ -36,5 +40,55 @@
     showCursor: false,
   });
 </script>
+<script>
+  tsParticles.load("tsparticles", {
+    fullScreen: { enable: false },
+    background: {
+      color: "#0a0a0a"
+    },
+    particles: {
+      number: {
+        value: 80
+      },
+      color: {
+        value: "#00ffff"
+      },
+      shape: {
+        type: "circle"
+      },
+      opacity: {
+        value: 0.5
+      },
+      size: {
+        value: { min: 1, max: 5 }
+      },
+      move: {
+        enable: true,
+        speed: 2
+      },
+      links: {
+        enable: true,
+        color: "#00ffff",
+        distance: 100,
+        opacity: 0.4,
+        width: 1
+      }
+    },
+    interactivity: {
+      events: {
+        onHover: {
+          enable: true,
+          mode: "repulse"
+        }
+      },
+      modes: {
+        repulse: {
+          distance: 100
+        }
+      }
+    }
+  });
+</script>
+
 </body>
 </html>
